@@ -1,8 +1,22 @@
-@server= https://lauraolortegui-cautious-space-memory-69gr9j4xwrww3rjjv-8080.preview.app.github.dev
-@apiserver={{server}}/api/ec3
-GET {{apiserver}}/instrumento/listar
-###
-POST {{apiserver}}/instrumento/nuevo
-Content-Type: application/x-www-form-urlencoded
+@server= https://ec3-lo.onrender.com
+@api={{server}}/api/ec3
 
-nombre=Guitarra
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+
+###
+GET {{api}}/instrumentos
+###
+POST {{api}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
