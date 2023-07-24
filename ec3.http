@@ -1,0 +1,8 @@
+@server= https://lauraolortegui-cautious-space-memory-69gr9j4xwrww3rjjv-8080.preview.app.github.dev
+@apiserver={{server}}/api/ec3
+GET {{apiserver}}/instrumento/listar
+###
+POST {{apiserver}}/instrumento/nuevo
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Guitarra
